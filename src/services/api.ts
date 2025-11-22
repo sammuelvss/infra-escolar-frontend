@@ -1,8 +1,9 @@
 import axios from 'axios';
 
-// Agora ele tenta pegar o link do Render. Se não tiver, usa o localhost.
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000',
+  // 👇 COLOCAMOS O LINK DIRETO AQUI. SEM VARIÁVEIS.
+  // Substitua pelo link do SEU backend se for diferente deste
+  baseURL: 'https://infra-escolar-backend.onrender.com', 
 });
 
 api.interceptors.request.use((config) => {
