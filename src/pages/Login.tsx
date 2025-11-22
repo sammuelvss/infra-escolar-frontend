@@ -34,7 +34,14 @@ export function Login() {
     <div className="min-h-screen flex items-center justify-center bg-gray-900 px-4">
       <div className="max-w-md w-full space-y-8 bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
         <h2 className="mt-6 text-3xl font-bold text-center text-white">Login do Sistema</h2>
-        
+        <h2 className="mt-6 text-3xl font-bold text-center text-white">Login do Sistema</h2>
+
+{/* --- CÓDIGO ESPIÃO (Apague depois) --- */}
+<div className="text-xs text-center text-gray-500 mt-2 font-mono bg-black p-2 rounded">
+  Tentando conectar em:<br/>
+  {import.meta.env.VITE_API_BASE_URL ? import.meta.env.VITE_API_BASE_URL : "LINK NÃO DETECTADO - Usando Localhost"}
+</div>
+{/* -------------------------------------- */}
         <form className="mt-8 space-y-6" onSubmit={handleLogin}>
           <div className="space-y-4">
             <div className="relative">
