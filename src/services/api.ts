@@ -1,10 +1,10 @@
 import axios from 'axios';
 
+// Agora ele tenta pegar o link do Render. Se não tiver, usa o localhost.
 const api = axios.create({
-  baseURL: 'http://localhost:3000', // Conecta com seu backend local
+  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000',
 });
 
-// Adiciona o token automaticamente se existir
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) {
