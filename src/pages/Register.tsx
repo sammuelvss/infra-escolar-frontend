@@ -46,7 +46,7 @@ import { useState } from 'react';
               </button>
             </form>
             <p className="text-center mt-4 text-gray-400">
-              Já tem conta? <Link to="/Login" className="text-blue-400 hover:underline">Entrar</Link>
+              Já tem conta? <Link to="/" className="text-blue-400 hover:underline">Entrar</Link>
             </p>
           </div>
         </div>
