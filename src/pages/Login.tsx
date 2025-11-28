@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom'; // <--- Importamos o Link
 import { Lock, Mail, Loader2 } from 'lucide-react';
 import api from '../services/api';
 
@@ -57,6 +57,18 @@ export function Login() {
           <button type="submit" disabled={loading} className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded font-bold transition flex justify-center disabled:opacity-50">
             {loading ? <Loader2 className="animate-spin" /> : 'Entrar'}
           </button>
+
+          {/* --- Link para Cadastro --- */}
+          <div className="text-center mt-4">
+            <p className="text-gray-400 text-sm">
+              Não tem uma conta?{' '}
+              <Link to="/register" className="text-blue-400 hover:text-blue-300 font-medium transition-colors">
+                Cadastre-se
+              </Link>
+            </p>
+          </div>
+          {/* ------------------------- */}
+
         </form>
       </div>
     </div>
